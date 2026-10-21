@@ -17,8 +17,8 @@ Abra `config.js` e ajuste `whatsapp` para o número correto, no formato internac
 O número atualmente preenchido é o WhatsApp comercial conhecido da Olivium Tecnologia; confirme se ele também deve ser usado para Gestão & Pessoas.
 
 ### 2. Domínio para compartilhamento
-No `index.html`, substitua `https://SEU-DOMINIO.com` em `og:image` e `og:url` pelo domínio final. A imagem está em `assets/og-image.svg`.
-Para melhor compatibilidade com alguns aplicativos, depois de definir o domínio é recomendável exportar a imagem Open Graph para JPG/PNG 1200×630.
+No `index.html`, substitua `https://SEU-DOMINIO.com` em `og:image` e `og:url` pelo domínio final. A imagem Open Graph pronta está em `assets/og-image.png` (1200×630), criada com a logo enviada.
+A imagem já está em PNG 1200×630 para melhor compatibilidade com plataformas de compartilhamento.
 
 ### 3. Personalizar serviços
 Os textos dos serviços estão em `index.html`. O formulário não armazena dados: ele abre o WhatsApp com uma mensagem pronta para a pessoa revisar e enviar.
@@ -28,7 +28,7 @@ Os textos dos serviços estão em `index.html`. O formulário não armazena dado
 - `styles.css` — visual premium e responsivo
 - `script.js` — menu, formulário, animações e WhatsApp
 - `config.js` — configuração de WhatsApp
-- `assets/logo.svg` — símbolo vetorial do site
-- `assets/favicon.svg` — favicon vetorial
-- `assets/og-image.svg` — imagem de compartilhamento
+- `assets/logo-olivium.png` — logo oficial enviada, usada no site
+- `assets/favicon.png` — favicon criado a partir do símbolo da logo
+- `assets/og-image.png` — imagem Open Graph 1200×630 com a logo oficial
 - `render.yaml` — configuração de publicação no Render
