@@ -32,3 +32,7 @@ Os textos dos serviços estão em `index.html`. O formulário não armazena dado
 - `assets/favicon.png` — favicon criado a partir do símbolo da logo
 - `assets/og-image.png` — imagem Open Graph 1200×630 com a logo oficial
 - `render.yaml` — configuração de publicação no Render
+
+
+## Logo e compartilhamento corrigidos
+A logo oficial transparente está em `assets/logo-olivium.png`; o símbolo isolado é usado no cabeçalho/rodapé e no favicon. A imagem social `assets/og-image.png` é PNG 1200×630 sobre fundo azul-marinho. Antes de publicar, substitua `https://SEU-DOMINIO.com` no `index.html` pelo endereço público do site.

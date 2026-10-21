@@ -8,9 +8,29 @@
 @media(max-width:760px){.announcement{padding:0 5%;font-size:9px}.announcement-right{display:none}.site-header{height:72px;padding:0 5%}.brand-mark{width:38px;height:38px}.brand-name{font-size:16px}.menu-toggle{display:flex;flex-direction:column;gap:6px;background:none;border:0;padding:10px;z-index:22}.menu-toggle span{width:25px;height:2px;background:#fff;display:block;transition:.2s}.nav{display:none;position:absolute;top:71px;left:0;right:0;padding:22px 6% 27px;background:#071a2b;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #29414b}.nav.open{display:flex}.nav a{padding:14px 0;border-bottom:1px solid #203743}.nav .nav-cta{padding:14px;margin-top:15px;text-align:center;border:0}.hero{display:flex;flex-direction:column;padding:52px 6% 50px;min-height:auto}.hero h1{font-size:clamp(42px,12vw,60px);margin-top:22px}.hero-copy{font-size:13px;line-height:1.85}.hero-actions{gap:10px}.button{padding:15px 15px;font-size:11px;gap:12px}.hero-proof{margin-top:35px;flex-wrap:wrap}.hero-visual{min-height:390px;margin-top:10px}.ring-a{width:290px;height:290px}.ring-b{width:230px;height:335px}.visual-core{width:145px;height:145px}.visual-core img{width:58px;height:58px}.card-talent{top:52px;left:-2px}.card-strategy{bottom:58px;right:-2px}.float-card{padding:10px}.float-card strong{font-size:9px}.float-card small{font-size:6px}.visual-caption{bottom:10px;font-size:7px}.hero-bottom{left:6%;right:6%;font-size:7px}.ticker{padding:14px 0}.ticker-track{justify-content:flex-start;gap:24px;font-size:9px}.section{padding:65px 5%}.section-heading{display:block;margin-bottom:28px}.section h2,.method-copy h2{font-size:42px}.section-heading>p{margin-top:18px;font-size:12px}.service-grid{grid-template-columns:1fr;gap:11px}.service-card{min-height:270px;padding:22px}.service-card h3{font-size:24px;margin-top:27px}.service-card p{max-width:320px;font-size:12px}.catalog-note{align-items:flex-start;flex-wrap:wrap;padding:18px}.catalog-note>div{flex:1;min-width:180px}.catalog-note>a{margin-left:22px;margin-top:8px}.method-section{grid-template-columns:1fr;padding:60px 6%;gap:18px}.method-visual{min-height:330px;order:2}.circle-one{width:275px;height:275px}.circle-two{width:210px;height:320px}.method-center{width:125px;height:125px}.method-center span{font-size:50px}.label-a{left:0;top:28px}.label-b{right:0;top:86px}.label-c{left:5px;bottom:40px}.method-copy>p{font-size:12px}.talent-section{grid-template-columns:1fr;padding:62px 6%;gap:15px}.talent-section h2{font-size:42px}.talent-content>p{font-size:12px}.talent-side{min-height:230px;padding-left:0}.talent-quote{font-size:20px}.talent-stat{left:0;bottom:5px}.talent-stamp{width:105px;height:105px;right:0;bottom:20px;font-size:8px}.about-section{grid-template-columns:1fr;gap:35px}.about-mark{min-height:230px}.about-mark img{width:85px}.about-content h2{font-size:42px}.about-content>p{font-size:12px}.quote-section{padding:65px 5%}.quote-inner h2{font-size:43px}.quote-inner>p{font-size:12px}.quote-form{padding:18px}.form-row{grid-template-columns:1fr;gap:0}.quote-form label{margin-bottom:14px}.footer{padding:35px 6% 0}.footer-main{grid-template-columns:1fr;gap:15px;padding-bottom:25px}.footer-main>p{margin:0}.footer-cta{justify-self:start;margin-top:10px}.footer-bottom{flex-wrap:wrap;line-height:1.6}.footer-bottom span:last-child{display:none}.floating-whatsapp{right:12px;bottom:12px;padding:11px 14px}.floating-whatsapp span:last-child{font-size:10px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* Ajustes para manter a logo oficial legível sobre fundos escuros */
-.brand-mark{width:54px;height:54px;object-fit:contain;background:#f5f5ef;border-radius:9px;padding:2px}
-.visual-core img{width:104px;height:104px;object-fit:contain;background:#f5f5ef;border-radius:12px;padding:3px}
-.about-mark img{width:190px;max-width:72%;background:#f5f5ef;border-radius:12px;padding:7px}
-.footer-brand .brand-mark{width:50px;height:50px}
-@media(max-width:760px){.brand-mark{width:48px;height:48px}.visual-core img{width:85px;height:85px}.about-mark img{width:170px}.footer-brand .brand-mark{width:46px;height:46px}}
+
+
+/* Logo oficial transparente e contenção segura em telas pequenas */
+img{max-width:100%;height:auto}
+.brand-mark{display:block;width:46px;height:46px;max-width:46px;object-fit:contain;flex:0 0 46px;background:transparent;border:0;border-radius:0;padding:0}
+.visual-core{overflow:hidden}
+.visual-core img{display:block;width:112px;height:112px;max-width:82%;max-height:82%;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0}
+.about-mark{min-width:0;width:100%;max-width:100%;overflow:hidden;padding:28px;background:var(--navy)}
+.about-mark img{display:block;width:min(100%,330px);max-width:100%;height:auto;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0;z-index:1}
+.footer-brand{min-width:0;max-width:100%}
+.footer-brand .brand-mark{width:42px;height:42px;max-width:42px;flex-basis:42px}
+.footer-brand .brand-name{white-space:normal}
+@media(max-width:760px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  main,section,header,footer{max-width:100%;min-width:0}
+  .site-header,.hero,.section,.method-section,.talent-section,.about-section,.quote-section,.footer{width:100%;min-width:0}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .hero-visual{width:100%;min-width:0;overflow:hidden}
+  .about-section{grid-template-columns:minmax(0,1fr);gap:28px}
+  .about-mark{min-height:180px;padding:24px}
+  .about-mark img{width:min(100%,260px);max-width:100%;margin:auto}
+  .footer-main{grid-template-columns:minmax(0,1fr);width:100%;min-width:0}
+  .footer-bottom{width:100%;min-width:0;overflow-wrap:anywhere}
+  .brand-mark{width:42px;height:42px;max-width:42px;flex-basis:42px}
+  .visual-core img{width:88px;height:88px}
+}
