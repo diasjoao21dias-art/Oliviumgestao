@@ -34,3 +34,55 @@ img{max-width:100%;height:auto}
   .brand-mark{width:42px;height:42px;max-width:42px;flex-basis:42px}
   .visual-core img{width:88px;height:88px}
 }
+
+
+/* Auditoria final: limites explícitos para impedir que a marca transborde no mobile. */
+.about-section { min-width: 0; }
+.about-mark {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-height: 300px;
+  padding: 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f5f5ef;
+  border: 1px solid #e3e8de;
+  border-radius: 18px;
+}
+.about-mark::before, .about-mark::after { pointer-events: none; }
+.about-mark img {
+  position: relative;
+  display: block;
+  width: min(100%, 250px);
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+  flex: 0 1 auto;
+}
+.brand, .brand-name, .footer-main, .footer-bottom, .quote-form, .form-row, .service-card { min-width: 0; }
+.brand-name { overflow-wrap: anywhere; }
+img { max-inline-size: 100%; }
+:focus-visible { outline: 3px solid #d5e65c; outline-offset: 3px; }
+@media (max-width: 760px) {
+  .about-mark { min-height: 220px; padding: 18px; }
+  .about-mark img { width: min(100%, 205px); max-height: 195px; }
+  .footer-brand .brand-name { letter-spacing: .08em; }
+  .footer-bottom { gap: 12px; }
+  .hero-proof { min-width: 0; }
+  .hero-bottom span { max-width: 48%; }
+  .quote-form input, .quote-form select, .quote-form textarea { min-width: 0; }
+  .floating-whatsapp { max-width: calc(100vw - 24px); }
+}
+@media (max-width: 360px) {
+  .brand { gap: 7px; }
+  .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
+  .brand-name { font-size: 13px; }
+  .hero h1 { font-size: 39px; }
+  .hero-bottom { letter-spacing: .06em; }
+  .hero-bottom span { font-size: 6px; }
+  .catalog-note > a { margin-left: 0; }
+}
