@@ -86,3 +86,124 @@ img { max-inline-size: 100%; }
   .hero-bottom span { font-size: 6px; }
   .catalog-note > a { margin-left: 0; }
 }
+
+
+/* Ajustes finais de legibilidade, navegação e layout responsivo (v2). */
+html {
+  scroll-padding-top: 104px;
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+}
+.site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+  background: rgba(7, 26, 43, .97);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+}
+main section[id], footer[id] { scroll-margin-top: 104px; }
+.brand { min-width: 0; flex-shrink: 0; }
+.brand-mark { object-fit: contain; filter: drop-shadow(0 1px 3px rgba(0,0,0,.22)); }
+.brand-name { color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.18); }
+.brand-name small { color: #d2e1e0; }
+.visual-core {
+  width: 194px;
+  height: 194px;
+  padding: 14px;
+  gap: 9px;
+  background: radial-gradient(circle at 50% 25%, #1d4b54 0%, #0b2b3b 72%);
+  border: 1.5px solid #d5e65c;
+  box-shadow: 0 0 0 12px rgba(213,230,92,.07), 0 0 70px rgba(70,160,132,.22);
+}
+.visual-core img {
+  width: 88px;
+  height: 80px;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,.2));
+}
+.visual-core span {
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  font-size: 8px;
+  line-height: 1.55;
+  letter-spacing: .10em;
+  overflow-wrap: normal;
+  word-break: normal;
+  color: #f1f5e9;
+}
+.about-mark {
+  background: #f8f7ef;
+  border: 1px solid #dce5d7;
+  box-shadow: inset 0 0 0 6px rgba(255,255,255,.42), 0 18px 45px rgba(7,26,43,.08);
+}
+.about-mark img {
+  width: min(100%, 320px);
+  max-height: 280px;
+  object-fit: contain;
+}
+/* Contraste reforçado para textos secundários sobre fundos escuros. */
+.hero-copy, .method-copy > p { color: #d0dcdf; }
+.hero-proof small { color: #b7c8cc; }
+.float-card small { color: #c0d5ce; }
+.visual-caption { color: #a9c0c2; }
+.hero-bottom { color: #a9c0c2; }
+.talent-content > p { color: #d1dcdf; }
+@media (max-width: 760px) {
+  html { scroll-padding-top: 80px; }
+  main section[id], footer[id] { scroll-margin-top: 80px; }
+  .site-header { height: 72px; }
+  .nav { z-index: 1001; max-height: calc(100dvh - 72px); overflow-y: auto; }
+  .hero-proof {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 17px;
+    width: 100%;
+  }
+  .proof-avatars { grid-column: 1; grid-row: 1; }
+  .hero-proof > div:nth-child(2) { grid-column: 2; grid-row: 1; min-width: 0; }
+  .hero-proof > div:nth-child(2) strong,
+  .hero-proof > div:last-child strong { font-size: 12px; line-height: 1.4; }
+  .hero-proof > div:nth-child(2) small,
+  .hero-proof > div:last-child small { font-size: 11px; line-height: 1.5; }
+  .proof-divider { display: none; }
+  .proof-star { grid-column: 1; grid-row: 2; justify-self: center; font-size: 24px; }
+  .hero-proof > div:last-child { grid-column: 2; grid-row: 2; min-width: 0; }
+  .hero-visual { min-height: 410px; overflow: visible; }
+  .visual-core { width: 176px; height: 176px; padding: 12px; gap: 7px; }
+  .visual-core img { width: 78px; height: 72px; }
+  .visual-core span { max-width: 160px; font-size: 8px; letter-spacing: .08em; line-height: 1.5; }
+  .ring-a { width: min(290px, 88vw); height: min(290px, 88vw); }
+  .ring-b { width: min(230px, 72vw); height: 335px; }
+  .float-card { max-width: calc(100% - 2px); gap: 9px; }
+  .card-talent { left: 0; }
+  .card-strategy { right: 0; }
+  .float-card strong { font-size: 10px; line-height: 1.35; }
+  .float-card small { font-size: 7px; line-height: 1.4; }
+  .hero-bottom span { line-height: 1.5; overflow-wrap: anywhere; }
+  .about-mark { background: #f8f7ef; }
+  .about-mark img { width: min(100%, 245px); max-height: 220px; }
+  .floating-whatsapp { z-index: 900; }
+}
+@media (max-width: 380px) {
+  .brand { gap: 7px; }
+  .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
+  .brand-name { font-size: 14px; letter-spacing: .07em; }
+  .brand-name small { font-size: 7px; letter-spacing: .18em; }
+  .hero-visual { min-height: 375px; }
+  .visual-core { width: 164px; height: 164px; }
+  .visual-core img { width: 70px; height: 64px; }
+  .visual-core span { font-size: 7.5px; }
+  .float-card { padding: 9px; }
+}

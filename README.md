@@ -36,3 +36,10 @@ Os textos dos serviços estão em `index.html`. O formulário não armazena dado
 
 ## Logo e compartilhamento corrigidos
 A logo oficial transparente está em `assets/logo-olivium.png`; o símbolo isolado é usado no cabeçalho/rodapé e no favicon. A imagem social `assets/og-image.png` é PNG 1200×630 sobre fundo azul-marinho. Antes de publicar, substitua `https://SEU-DOMINIO.com` no `index.html` pelo endereço público do site.
+
+
+## Atualização v2 (mobile, cabeçalho e prévia de compartilhamento)
+- O cabeçalho foi reforçado para permanecer visível durante a rolagem, incluindo compatibilidade com Safari/WebKit.
+- Ajustados os textos e o núcleo visual do hero em telas pequenas para evitar cortes e melhorar contraste.
+- A prévia social agora usa `assets/og-image-v2.png` para evitar cache antigo do arquivo OG anterior.
+- Depois do deploy, teste a imagem abrindo `https://oliviumgestao.onrender.com/assets/og-image-v2.png` diretamente. Para WhatsApp, o preview pode continuar em cache por algum tempo; compartilhar o link novamente após o deploy e, se necessário, testar com um parâmetro de URL novo.
